@@ -23,7 +23,7 @@ export function login(req: Request, res: Response) {
      if (req.session) {
          req.session.user = req.user as User;
      }
-     res.redirect('http://localhost:5173/home');
+     res.redirect('https://todo-frontend-theta-one.vercel.app/home');
 }
 export function getUserDetails(req: Request, res: Response) {
     if (req.session && req.session.user) {

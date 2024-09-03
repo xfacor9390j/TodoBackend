@@ -24,7 +24,7 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false, maxAge: 60000 * 60 * 24 },
+    cookie: { secure: true, maxAge: 60000 * 60 * 24 },
     store:  MongoStore.create({
         mongoUrl:`mongodb+srv://${username}:${password}@abhinay.yst3wid.mongodb.net/?retryWrites=true&w=majority&appName=abhinay`
     })

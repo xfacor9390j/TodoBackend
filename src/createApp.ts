@@ -6,7 +6,6 @@ import MongoStore from "connect-mongo";
 import cors from "cors";
 const username = process.env.db_username;
 const password = process.env.db_password;
-const app = express();
 
 export function createApp() {
   const app = express();
@@ -18,7 +17,7 @@ export function createApp() {
     })
   );
   app.use(express.json());
-
+  app.options("*", cors());
   app.use(
     session({
       secret: "keyboard cat",

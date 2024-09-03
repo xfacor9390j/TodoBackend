@@ -1,4 +1,4 @@
-import dbConnect from "../server/src/dbConnection/dbConnection";
+import dbConnect from "./src/dbConnection/dbConnection";
 import { createApp } from "../server/createApp";
 const PORT = 3000;
 const app = createApp();

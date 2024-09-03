@@ -1,5 +1,5 @@
 import express, { Request,Response } from "express";
-import router from '../server/src/router'
+import router from './src/router/index'
 import passport from "passport";
 import session from "express-session";
 import MongoStore from "connect-mongo";

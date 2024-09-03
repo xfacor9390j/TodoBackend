@@ -25,10 +25,11 @@ export function createApp() {
       resave: false,
       saveUninitialized: false,
       cookie: {
+        path: "/",
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
-          sameSite: "none",
+        sameSite: "none",
         domain:'.vercel.app'
        
       },

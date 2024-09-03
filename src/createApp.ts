@@ -12,7 +12,7 @@ export function createApp() {
 
   app.use(
     cors({
-      origin: "https://todo-frontend-theta-one.vercel.app",
+      origin: "https://todo-frontend-theta-one.vercel.app/",
       credentials: true,
     })
   );

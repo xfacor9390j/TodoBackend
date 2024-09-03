@@ -7,8 +7,8 @@ import { User } from "../utils/user.interface";
 
 const clientId=process.env.clientId;
 const clientSecret = process.env.clientSecret;
-const redirectUri = process.env.callBackUrl;
-if (!clientId || !clientSecret || !redirectUri) {
+const redirectUri = "https://todo-backend-theta-one.vercel.app/api/auth/github/redirect"
+if (!clientId || !clientSecret ) {
     throw new Error("Environment variables CLIENT_ID, CLIENT_SECRET, and CALLBACK_URL must be defined");
 }
 passport.serializeUser((user: any, done) => {

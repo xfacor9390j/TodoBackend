@@ -28,7 +28,8 @@ export function createApp() {
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
-        sameSite: "none",
+          sameSite: "none",
+        domain:'.vercel.app'
        
       },
       store: MongoStore.create({

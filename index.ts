@@ -1,5 +1,5 @@
 import dbConnect from "./src/dbConnection/dbConnection";
-import { createApp } from "../server/createApp";
+import { createApp } from "./createApp";
 const PORT = 3000;
 const app = createApp();
 async function startServer() {

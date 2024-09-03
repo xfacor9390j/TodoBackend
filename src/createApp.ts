@@ -13,7 +13,7 @@ export function createApp() {
 
   app.use(
     cors({
-      origin: "https://todo-frontend-theta-one.vercel.app/",
+      origin: "https://todo-frontend-theta-one.vercel.app",
       credentials: true,
     })
   );
@@ -29,7 +29,7 @@ export function createApp() {
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
         sameSite: "none",
-        domain: "todo-backend-theta-one.vercel.app",
+       
       },
       store: MongoStore.create({
         mongoUrl: `mongodb+srv://${username}:${password}@abhinay.yst3wid.mongodb.net/?retryWrites=true&w=majority&appName=abhinay`,

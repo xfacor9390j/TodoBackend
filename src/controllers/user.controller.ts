@@ -13,7 +13,7 @@ declare module 'express-session' {
 }
 export function rootUrl(req: Request, res: Response) {
     req.session.visited = true;
-    res.cookie('backendCookie', {
+    res.cookie('backendCookie', 'abhinay',{
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,

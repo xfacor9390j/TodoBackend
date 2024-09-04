@@ -4,6 +4,7 @@ import passport from "passport";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 
 const username = process.env.db_username;
 const password = process.env.db_password;
@@ -18,7 +19,7 @@ export function createApp() {
       credentials: true,
     })
   );
-  console.log("removed the createApp in src folder")
+  app.use(cookieParser());
   app.use(express.json());
   app.options("*", cors());
   app.use(
@@ -31,7 +32,8 @@ export function createApp() {
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
-        sameSite: "none"
+        sameSite: "none",
+        partitioned: true,
         
        
       },

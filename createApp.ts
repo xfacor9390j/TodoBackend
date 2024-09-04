@@ -6,6 +6,7 @@ import MongoStore from "connect-mongo";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
+
 const username = process.env.db_username;
 const password = process.env.db_password;
 
@@ -32,7 +33,7 @@ export function createApp() {
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
-        sameSite: "none",
+        sameSite: "lax",
         partitioned: true,
         
        

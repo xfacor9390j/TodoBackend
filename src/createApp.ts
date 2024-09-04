@@ -17,6 +17,7 @@ export function createApp() {
       credentials: true,
     })
   );
+  console.log("hello world!")
   app.use(express.json());
   app.options("*", cors());
   app.use(

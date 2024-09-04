@@ -22,7 +22,7 @@ export function createApp() {
   );
   app.use(cookieParser());
   app.use(express.json());
-  app.options("*", cors());
+  // app.options("*", cors());
   app.use(
     session({
       secret: "keyboard cat",
@@ -32,9 +32,9 @@ export function createApp() {
         path: "/",
         secure: true,
         maxAge: 60000 * 60 * 24,
-        httpOnly: true,
-        sameSite: "lax",
-        partitioned: true,
+        // httpOnly: true,
+        sameSite: "none",
+        // partitioned: true,
         
        
       },

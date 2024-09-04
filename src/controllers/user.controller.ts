@@ -13,7 +13,7 @@ declare module 'express-session' {
 }
 export function rootUrl(req: Request, res: Response) {
     req.session.visited = true;
-    res.status(200).json('root url')
+    res.status(200).json(req.session.visited);
 }
 export function login(req: Request, res: Response) {
     res.status(200).json('logged in!')
@@ -27,7 +27,8 @@ export function login(req: Request, res: Response) {
 }
 export function getUserDetails(req: Request, res: Response) {
     if (req.session && req.session.user) {
-      res.status(200).json(req.session.user);
+        res.status(200).json(req.session.user);
+        console.log(req.session.user)
     } else {
       res.status(401).json({ message: 'Not authenticated' });
     }

@@ -35,12 +35,12 @@ export function createApp() {
       resave: false,
       saveUninitialized: false,
       cookie: {
-        // path: "/",
-        // secure: true,
+        path: "/",
+        secure: true,
         maxAge: 60000 * 60 * 24,
-        // httpOnly: true,
-        // sameSite: "none",
-        // partitioned: true,
+        httpOnly: false,
+        sameSite: "none",
+        partitioned: true,
         
        
       },

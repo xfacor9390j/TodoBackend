@@ -4,6 +4,7 @@ import passport from "passport";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import cors from "cors";
+
 const username = process.env.db_username;
 const password = process.env.db_password;
 
@@ -30,7 +31,7 @@ export function createApp() {
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
-        sameSite: "none",
+        sameSite: "strict"
         
        
       },

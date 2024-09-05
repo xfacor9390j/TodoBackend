@@ -39,7 +39,7 @@ export function createApp() {
         path: "/",
         secure: true,
         maxAge: 60000 * 60 * 24,
-        httpOnly: true,
+        // httpOnly: true,
         sameSite: "none",
         partitioned: true,
         

@@ -13,13 +13,13 @@ const password = process.env.db_password;
 
 export function createApp() {
   const app = express();
-  app.use(function (req:Request, res:Response, next) {
-    //Enabling CORS
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type");
-      next();
-    });
+  // app.use(function (req:Request, res:Response, next) {
+  //   //Enabling CORS
+  //   res.header("Access-Control-Allow-Origin", "*");
+  //   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  //   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type");
+  //     next();
+  //   });
   app.use(
     cors({
       origin: "https://todo-frontend-theta-one.vercel.app",

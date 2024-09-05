@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {getUserDetails, login,logout,redirect, rootUrl, status} from '../controllers/user.controller'
+import {getSessionStatus, getUserDetails, login,logout,redirect, rootUrl, status} from '../controllers/user.controller'
 import '../Strategy/user.github.strat'
 import passport from "passport";
 const userRoute = Router();
@@ -9,5 +9,6 @@ userRoute.get('/api/auth/github/redirect', passport.authenticate('github', { fai
 userRoute.get('/api/auth/user', getUserDetails)
 userRoute.get('/api/auth/logout', logout)
 userRoute.get('/api/auth/status', status)
+userRoute.get('/api/session', getSessionStatus)
 
 export default userRoute

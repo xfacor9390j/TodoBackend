@@ -37,12 +37,12 @@ export function createApp() {
       saveUninitialized: false,
       cookie: {
         
-        path: "/home",
+        path: "/",
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
         sameSite: "none",
-        partitioned: true,
+        // partitioned: true,
         
        
       },

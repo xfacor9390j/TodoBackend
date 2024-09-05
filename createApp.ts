@@ -36,8 +36,6 @@ export function createApp() {
       resave: false,
       saveUninitialized: false,
       cookie: {
-        
-        domain:'https://todo-frontend-theta-one.vercel.app/home',
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,

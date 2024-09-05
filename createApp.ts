@@ -26,6 +26,11 @@ export function createApp() {
       credentials: true,
     })
   );
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Origin', 'https://todo-frontend-theta-one.vercel.app');
+    next();
+  });
   app.use(cookieParser());
   app.use(express.json());
   // app.options("*", cors());
@@ -41,7 +46,7 @@ export function createApp() {
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
         sameSite: "none",
-        // partitioned: true,
+        partitioned: true,
         
        
       },

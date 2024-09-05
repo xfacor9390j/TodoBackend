@@ -26,7 +26,7 @@ export function createApp() {
       credentials: true,
     })
   );
-
+  
   app.use(cookieParser());
   app.use(express.json());
   // app.options("*", cors());
@@ -36,11 +36,15 @@ export function createApp() {
       resave: false,
       saveUninitialized: false,
       cookie: {
+        
+        path: "/home",
         secure: true,
         maxAge: 60000 * 60 * 24,
         httpOnly: true,
         sameSite: "none",
         partitioned: true,
+        
+       
       },
       store: MongoStore.create({
         mongoUrl: `mongodb+srv://${username}:${password}@abhinay.yst3wid.mongodb.net/?retryWrites=true&w=majority&appName=abhinay`,

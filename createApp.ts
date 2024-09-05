@@ -26,11 +26,7 @@ export function createApp() {
       credentials: true,
     })
   );
-  app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Allow-Origin', 'https://todo-frontend-theta-one.vercel.app');
-    next();
-  });
+
   app.use(cookieParser());
   app.use(express.json());
   // app.options("*", cors());
@@ -47,8 +43,6 @@ export function createApp() {
         httpOnly: true,
         sameSite: "none",
         partitioned: true,
-        
-       
       },
       store: MongoStore.create({
         mongoUrl: `mongodb+srv://${username}:${password}@abhinay.yst3wid.mongodb.net/?retryWrites=true&w=majority&appName=abhinay`,

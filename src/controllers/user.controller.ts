@@ -13,7 +13,9 @@ declare module 'express-session' {
 }
 export function rootUrl(req: Request, res: Response) {
     req.session.visited = true;
-    res.status(200).json(req.session);
+    console.log(req.sessionID)
+    console.log(req.session)
+    res.status(200).json('root url');
 }
 export function login(req: Request, res: Response) {
     res.status(200).json('logged in!')

@@ -22,17 +22,15 @@ export function createApp() {
   app.options("*", cors());
   app.use(
     session({
-      secret: "keyboard cat",
+      secret: "new password for the production!!!",
       resave: false,
       saveUninitialized: false,
       cookie: {
         path: "/",
-        secure: true,
-        maxAge: 60000 * 60 * 24,
-        httpOnly: true,
+        maxAge: 1000 * 60 * 60 * 24 * 7,
         sameSite: "none",
-        
-       
+        secure: true,
+        httpOnly: true,
       },
       store: MongoStore.create({
         mongoUrl: `mongodb+srv://${username}:${password}@abhinay.yst3wid.mongodb.net/?retryWrites=true&w=majority&appName=abhinay`,

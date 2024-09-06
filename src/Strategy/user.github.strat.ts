@@ -8,6 +8,9 @@ import { User } from "../utils/user.interface";
 const clientId=process.env.clientId;
 const clientSecret = process.env.clientSecret;
 const redirectUri = "https://todo-backend-nine-phi.vercel.app/api/auth/github/redirect"
+// const clientId = process.env.testClientId;
+// const clientSecret = process.env.testClientSecret;
+// const redirectUri = process.env.testCallBack
 if (!clientId || !clientSecret ) {
     throw new Error("Environment variables CLIENT_ID, CLIENT_SECRET, and CALLBACK_URL must be defined");
 }

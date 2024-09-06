@@ -13,7 +13,7 @@ declare module 'express-session' {
 }
 export function rootUrl(req: Request, res: Response) {
     req.session.visited = true;
-    res.status(200).json(req.session.visited);
+    res.status(200).json(req.session);
 }
 export function login(req: Request, res: Response) {
     res.status(200).json('logged in!')
